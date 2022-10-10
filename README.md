@@ -24,3 +24,18 @@ git clone https://github.com/PixarAnimationStudios/USD
 ## Build UFG
 1. 3.[Install Open GL](https://www.includehelp.com/linux/how-to-install-opengl-in-ubuntu-linux.aspx): `apt install freeglut3-dev` and then `apt install binutils-gold g++ mesa-common-dev cmake libglew-dev build-essential libglew1.5-dev libglm-dev`
 2. Build with `python3 usd_from_gltf/tools/ufginstall/ufginstall.py /usr/local/UFG /usr/local/USD`
+
+## Docker 
+(Need to fix why the mount binding is read-only)
+```
+sudo docker run -it --mount type=bind,source=/home/caleb/models,target=/mnt/models summertriangle/usdzconvert-docker:v0.64
+```
+Inside the container, navigate to the mount point
+```
+cd /mnt/models
+```
+Convert your file
+```
+usdzconvert -iOS12 test.glb /tmp/test.usdz 
+```
+
