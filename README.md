@@ -1,13 +1,17 @@
 # USDZ Conversion
 
-## Build USD on Ubuntu 20.04 
-1. Update 
+## Build USD on CentOS
+1. Dependancies 
 ```
-apt update && apt upgrade -y
+yum update -y &&
+yum install -y git python3 gcc-c++ nasm curl &&
+python3 -m pip install --upgrade &&
+pip install PySide2 cmake PyOpenGL
 ```
-2. Install [USD](https://github.com/PixarAnimationStudios/USD)
+2. Build [USD](https://github.com/PixarAnimationStudios/USD)
 ```
-apt install python3 python3-pip git build-essential nasm cmake -y
+git clone https://github.com/PixarAnimationStudios/USD &&
+python3 USD/build_scripts/build_usd.py /usr/local/USD
 ```
 3. PIP
 ```
