@@ -1,1 +1,25 @@
-# usdz-conversion
+# USDZ Conversion
+
+## Build USD on Ubuntu 20.04 
+1. Update 
+```
+apt update && apt upgrade -y
+```
+2. Install [USD](https://github.com/PixarAnimationStudios/USD)
+	* C++ compiler
+```
+	apt install build-essential nasm cmake`
+```
+	* Need `python curl git` installed
+	* Also install  `pip` with [this](https://stackoverflow.com/questions/64187581/e-package-python-pip-has-no-installation-candidate): (deprecated)
+```
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+python get-pip.py
+```
+	* `git clone https://github.com/PixarAnimationStudios/USD`
+2. PIP
+```
+pip install pyopengl and pyside6
+```
+4. 3.[Install Open GL](https://www.includehelp.com/linux/how-to-install-opengl-in-ubuntu-linux.aspx): `apt install freeglut3-dev` and then `apt install binutils-gold g++ mesa-common-dev cmake libglew-dev build-essential libglew1.5-dev libglm-dev`
+5. Build with `python3 usd_from_gltf/tools/ufginstall/ufginstall.py /usr/local/UFG /usr/local/USD`
