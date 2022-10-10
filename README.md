@@ -6,16 +6,15 @@
 apt update && apt upgrade -y
 ```
 2. Install [USD](https://github.com/PixarAnimationStudios/USD)
-C++ compiler
+C++ compiler:
 ```
-apt install python3 python-pip3 curl git build-essential nasm cmake`
+apt install python3 python-pip3 curl git build-essential nasm cmake
 ```
-	* Also install  `pip` with [this](https://stackoverflow.com/questions/64187581/e-package-python-pip-has-no-installation-candidate): (deprecated)
+Download USD:
 ```
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
-python get-pip.py
+git clone https://github.com/PixarAnimationStudios/USD
 ```
-	* `git clone https://github.com/PixarAnimationStudios/USD`
+
 2. PIP
 ```
 pip install pyopengl and pyside6
