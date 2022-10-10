@@ -6,11 +6,10 @@
 apt update && apt upgrade -y
 ```
 2. Install [USD](https://github.com/PixarAnimationStudios/USD)
-	* C++ compiler
+C++ compiler
 ```
-	apt install build-essential nasm cmake`
+apt install python3 python-pip3 curl git build-essential nasm cmake`
 ```
-	* Need `python curl git` installed
 	* Also install  `pip` with [this](https://stackoverflow.com/questions/64187581/e-package-python-pip-has-no-installation-candidate): (deprecated)
 ```
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
