@@ -34,8 +34,12 @@ Inside the container, navigate to the mount point
 ```
 cd /mnt/models
 ```
-Convert your file
+Convert
 ```
 usdzconvert -iOS12 test.glb /tmp/test.usdz 
+```
+Download
+```
+docker cp (container):/tmp/test.usdz .
 ```
 
